@@ -1,0 +1,1149 @@
+/* ========================================
+   СБРОС И БАЗОВЫЕ СТИЛИ
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #333;
+    background-color: #fdfaf7;
+    text-align: center;
+    overflow-x: hidden;          /* ← запрещает горизонтальный скролл */
+    max-width: 100%;
+}
+
+/* ========================================
+   ПЕРВАЯ СТРАНИЦА (HERO)
+   ======================================== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #fdfaf7;
+}
+
+.hero-top-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.main-title {
+    font-weight: 400;
+    font-size: 45px;
+    letter-spacing: 10px;
+    color: #333;
+    margin: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.small-line {
+    width: 200px;
+    height: 1px;
+    background-color: #000;
+    margin: 15px auto;
+    margin-left: auto;
+    margin-top: 15px;
+}
+
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    font-size: 5rem;
+    color: #2d2d2d;
+    text-transform: none;
+    margin: 0;
+    margin-left: 0px;
+    margin-top: 0px;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+.hero-image-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.main-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hero-bottom-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.wedding-details {
+    font-family: 'Cormorant', serif;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    color: #2d2d2d;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pipe {
+    font-weight: 300;
+    color: #a68b7c;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ========================================
+   СЕКЦИЯ "МЫ СТАНЕМ СЕМЬЕЙ"
+   ======================================== */
+
+.ct-section-couple {
+    display: flex;
+    align-items: center;
+    background-image: url('images/fon2.jpg');
+    background-repeat: repeat;
+    min-height: 150vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ct-couple-image {
+    width: 40%;
+    height: 120vh;
+    flex-shrink: 0;
+}
+
+.ct-couple-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ct-couple-text {
+    flex-grow: 1;
+    padding-left: 15%;
+    padding-right: 5%;
+    text-align: left;
+}
+
+.script-text {
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    text-transform: none;
+    font-size: 8rem;
+    letter-spacing: 0px;
+    margin-left: -20px;
+    margin-bottom: -30px;
+    color: #2d2d2d;
+}
+
+.ct-official-title .main-title {
+    display: block;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    line-height: 1;
+    color: #2d2d2d;
+    text-transform: uppercase;
+    text-align: right;
+    margin-left: 100px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+.ct-joke-description {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 0.9px;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-left: 20px;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* ========================================
+   СЕКЦИЯ КАЛЕНДАРЯ
+   ======================================== */
+
+.wedding-calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 180px;
+}
+
+.calendar-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.side-line-top {
+    width: 1px;
+    height: 150px;
+    background-color: #333;
+}
+
+.side-numbers {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 5rem;
+    gap: 20px;
+    line-height: 1;
+    color: #333;
+    margin: 20px 0;
+}
+
+.side-line-bottom {
+    width: 1px;
+    height: 150px;
+    background-color: #333;
+}
+
+.calendar-main {
+    width: 600px;
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.header-text {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 3.5rem;
+    letter-spacing: 15px;
+    margin-left: -300px;
+    margin-top: 0px;
+}
+
+.header-script {
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    color: #d4bda1;
+    position: absolute;
+    left: 73%;
+    top: -30px;
+    transform: translateX(-50%);
+}
+
+.calendar-frame {
+    border: 1px solid #333;
+    padding: 40px 50px;
+    width: 450px;
+}
+
+.month-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 20px 10px;
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.heart-day {
+    position: relative;
+    z-index: 1;
+}
+
+.heart-day::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 -6 143 143" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M67.3959 125.449L68.1194 125.669C70.78 126.474 73.2927 127.233 74.949 130.561C74.9909 130.645 75.0497 130.719 75.122 130.779C75.1942 130.838 75.2782 130.882 75.3679 130.907C75.4247 130.922 75.4828 130.929 75.5415 130.929C75.6699 130.929 75.7952 130.892 75.903 130.821C77.1242 130.018 78.2744 129.291 79.3665 128.6C81.6546 127.152 83.631 125.903 85.5209 124.447C92.2994 119.338 98.4848 113.475 103.96 106.965C111.156 98.2636 118.597 89.2656 125.602 79.8467C129.986 73.9503 133.723 67.3678 136.882 61.663C140.042 55.8907 141.923 49.4951 142.396 42.9172C143.253 32.1074 140.707 22.3639 134.828 13.9577C128.286 4.60191 119.585 0.0455045 108.986 0.396793C97.0287 0.80022 86.5129 5.41512 77.7296 14.1139C77.3036 14.5557 76.9092 15.0275 76.5497 15.5256C75.8668 16.425 75.2188 17.2788 74.2435 17.617C63.9983 7.5411 56.165 3.59962 44.4467 2.58942C32.4206 1.55185 22.6847 5.45696 15.5078 14.1903C11.9462 18.5071 8.82442 23.1754 6.19001 28.1245C0.574558 38.7407 -0.595573 50.0327 2.71755 61.6891C5.67229 72.0929 10.5991 81.8182 17.2247 90.3254C30.4714 107.388 47.3519 119.207 67.3959 125.449ZM17.7895 30.135C19.3284 27.207 21.0427 24.3766 22.9228 21.6592C27.3926 15.072 33.6922 11.7475 41.681 11.7475C42.6707 11.7475 43.6862 11.7985 44.7276 11.9006C55.3982 12.9479 63.9582 17.6946 70.1694 26.0082C70.9155 27.0067 71.7282 27.931 72.4446 28.7456C72.7364 29.078 73.0107 29.3903 73.2527 29.6765C73.3534 29.7957 73.4928 29.8751 73.6458 29.9011C76.5265 30.403 77.6909 28.8948 78.5551 27.4466C83.5432 19.0932 91.3067 14.1069 102.989 11.7555C105.755 11.2734 108.577 11.2019 111.364 11.5435C115.789 11.9652 119.585 14.1611 122.648 18.0683C126.138 22.5501 128.207 27.9912 128.582 33.6798C129.2 40.2551 128.004 46.8749 125.127 52.8066C122.959 57.4039 120.492 61.8512 117.741 66.1184C112.633 73.717 107.177 81.2714 101.903 88.5767L100.069 91.1185C96.1412 96.5645 92.0787 102.054 88.1511 107.363C86.7337 109.278 85.3176 111.194 83.9021 113.112C83.2915 113.939 82.6557 114.75 81.9831 115.609C81.7611 115.892 81.5358 116.18 81.3067 116.474C79.4226 115.692 77.5882 114.927 75.7894 114.18C71.5436 112.417 67.4953 110.735 63.4566 109.028C52.278 104.38 42.1525 97.4841 33.6954 88.7612C25.0244 79.7528 19.0146 70.1155 15.3239 59.2979C11.9585 49.4305 12.7646 39.8909 17.7895 30.135Z" fill="%23e74c3c"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.calendar-right-line {
+    width: 1px;
+    height: 150px;
+    background-color: #333;
+}
+
+/* ========================================
+   СЕКЦИЯ ЛОКАЦИЯ
+   ======================================== */
+
+.location-section {
+    background-image: url('images/fon2.jpg');
+    background-repeat: repeat;
+    min-height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 40px;
+}
+
+.loc-header {
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.loc-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    color: #2d2d2d;
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.loc-subheader {
+    margin-bottom: 50px;
+}
+
+.loc-subtitle {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    color: #2d2d2d;
+    text-transform: uppercase;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.loc-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.loc-photo-small {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.loc-photo-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loc-photo-left {
+    position: relative;
+    left: 29.5px;              /* ← ДВИГАЙ ВЛЕВО/ВПРАВО (плюс = вправо) */
+    margin-top: 0px;           /* ← ДВИГАЙ ВВЕРХ/ВНИЗ (margin-top работает) */
+}
+
+.loc-photo-right {
+    position: relative;
+    left: -29.5px;             /* ← ДВИГАЙ ВЛЕВО/ВПРАВО (минус = влево) */
+    margin-top: 0px;           /* ← ДВИГАЙ ВВЕРХ/ВНИЗ */
+}
+
+.loc-photo-big {
+    width: 350px;
+    height: 450px;
+    position: relative;
+    overflow: visible;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 30px 17px 80px 17px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.loc-photo-big img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loc-photo-caption {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    background: none;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+/* ========================================
+   СЕКЦИЯ ТАЙМЕРА
+   ======================================== */
+
+.timer-section {
+    background-color: #fdfaf7;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0px;
+}
+
+.timer-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    padding-left: 0px;
+    padding-top: 0px;
+}
+
+.timer-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.timer-bg {
+    position: relative;
+    padding: 40px 60px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.timer-bg::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -35px;
+    width: 110%;
+    height: 130%;
+    background-image: url('images/fontimer.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.timer-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.timer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: #2d2d2d;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.timer-label {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    margin-top: 5px;
+}
+
+/* ========================================
+   СЕКЦИЯ КОНТАКТЫ
+   ======================================== */
+
+.contacts-section {
+    background-color: #fdfaf7;
+    min-height: auto;
+    margin-top: -50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
+.contacts-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.contacts-script {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    color: #d4bda1;
+    font-weight: 400;
+    text-transform: none;
+    margin: 0;
+    line-height: 1;
+    margin-left: -200px;
+    margin-top: 0px;
+}
+
+.contacts-main {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    color: #2d2d2d;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    margin-left: 0px;
+    margin-top: 5px;
+}
+
+.contacts-subtitle {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #2d2d2d;
+    margin-bottom: 60px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.contacts-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.contact-card {
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.contact-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #2d2d2d;
+    margin-bottom: 8px;
+    margin-top: -50px;
+}
+
+.contact-phone {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #555;
+}
+
+.contacts-photo {
+    position: relative;
+    width: 400px;
+    height: 267px;
+    margin-top: 60px;
+    margin-left: 0px;
+}
+
+.contacts-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.contacts-heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 100%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 -6 143 143" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M67.3959 125.449L68.1194 125.669C70.78 126.474 73.2927 127.233 74.949 130.561C74.9909 130.645 75.0497 130.719 75.122 130.779C75.1942 130.838 75.2782 130.882 75.3679 130.907C75.4247 130.922 75.4828 130.929 75.5415 130.929C75.6699 130.929 75.7952 130.892 75.903 130.821C77.1242 130.018 78.2744 129.291 79.3665 128.6C81.6546 127.152 83.631 125.903 85.5209 124.447C92.2994 119.338 98.4848 113.475 103.96 106.965C111.156 98.2636 118.597 89.2656 125.602 79.8467C129.986 73.9503 133.723 67.3678 136.882 61.663C140.042 55.8907 141.923 49.4951 142.396 42.9172C143.253 32.1074 140.707 22.3639 134.828 13.9577C128.286 4.60191 119.585 0.0455045 108.986 0.396793C97.0287 0.80022 86.5129 5.41512 77.7296 14.1139C77.3036 14.5557 76.9092 15.0275 76.5497 15.5256C75.8668 16.425 75.2188 17.2788 74.2435 17.617C63.9983 7.5411 56.165 3.59962 44.4467 2.58942C32.4206 1.55185 22.6847 5.45696 15.5078 14.1903C11.9462 18.5071 8.82442 23.1754 6.19001 28.1245C0.574558 38.7407 -0.595573 50.0327 2.71755 61.6891C5.67229 72.0929 10.5991 81.8182 17.2247 90.3254C30.4714 107.388 47.3519 119.207 67.3959 125.449ZM17.7895 30.135C19.3284 27.207 21.0427 24.3766 22.9228 21.6592C27.3926 15.072 33.6922 11.7475 41.681 11.7475C42.6707 11.7475 43.6862 11.7985 44.7276 11.9006C55.3982 12.9479 63.9582 17.6946 70.1694 26.0082C70.9155 27.0067 71.7282 27.931 72.4446 28.7456C72.7364 29.078 73.0107 29.3903 73.2527 29.6765C73.3534 29.7957 73.4928 29.8751 73.6458 29.9011C76.5265 30.403 77.6909 28.8948 78.5551 27.4466C83.5432 19.0932 91.3067 14.1069 102.989 11.7555C105.755 11.2734 108.577 11.2019 111.364 11.5435C115.789 11.9652 119.585 14.1611 122.648 18.0683C126.138 22.5501 128.207 27.9912 128.582 33.6798C129.2 40.2551 128.004 46.8749 125.127 52.8066C122.959 57.4039 120.492 61.8512 117.741 66.1184C112.633 73.717 107.177 81.2714 101.903 88.5767L100.069 91.1185C96.1412 96.5645 92.0787 102.054 88.1511 107.363C86.7337 109.278 85.3176 111.194 83.9021 113.112C83.2915 113.939 82.6557 114.75 81.9831 115.609C81.7611 115.892 81.5358 116.18 81.3067 116.474C79.4226 115.692 77.5882 114.927 75.7894 114.18C71.5436 112.417 67.4953 110.735 63.4566 109.028C52.278 104.38 42.1525 97.4841 33.6954 88.7612C25.0244 79.7528 19.0146 70.1155 15.3239 59.2979C11.9585 49.4305 12.7646 39.8909 17.7895 30.135Z" fill="%23e74c3c"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+/* ========================================
+   СЕКЦИЯ RSVP
+   ======================================== */
+
+.rsvp-section {
+    background-color: #fdfaf7;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 200px 20px;
+    position: relative; 
+}
+
+.rsvp-sidebar {
+    position: absolute;
+    left: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rsvp-line-top {
+    width: 1px;
+    height: 120px;
+    background-color: #333;
+}
+
+.rsvp-date {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 4rem;
+    gap: 15px;
+    line-height: 1;
+    color: #333;
+    margin: 15px 0;
+}
+
+.rsvp-line-bottom {
+    width: 1px;
+    height: 120px;
+    background-color: #333;
+}
+
+.rsvp-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.rsvp-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+.rsvp-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.rsvp-subtitle {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: #d4bda1;
+    text-transform: none;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.rsvp-text {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #2d2d2d;
+    margin-bottom: 40px;
+}
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.rsvp-input {
+    width: 100%;
+    max-width: 380px;
+    padding: 14px 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: #333;
+    outline: none;
+    text-align: center;
+}
+
+.rsvp-input:focus {
+    border-color: #a68b7c;
+}
+
+.rsvp-question {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #2d2d2d;
+    margin-top: 10px;
+}
+
+.rsvp-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.rsvp-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #2d2d2d;
+}
+
+.rsvp-option input[type="radio"] {
+    accent-color: #a68b7c;
+    width: 16px;
+    height: 16px;
+}
+
+.rsvp-btn {
+    margin-top: 20px;
+    padding: 14px 50px;
+    border: 1px solid #a68b7c;
+    background: transparent;
+    color: #a68b7c;
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.rsvp-btn:hover {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.rsvp-footer-text {
+    font-family: 'Cinzel', serif;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #2d2d2d;
+    margin-left: 0px;
+    margin-top: 80px;
+    letter-spacing: 0px;
+    line-height: 1;
+}
+
+/* ========================================
+   АНИМАЦИЯ ПОЯВЛЕНИЯ ПРИ СКРОЛЛЕ
+   ======================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+
+/* ========================================
+   ОБЩИЙ АДАПТИВ ДЛЯ ТЕЛЕФОНОВ
+   ======================================== */
+
+@media (max-width: 768px) {
+
+    /* --- HERO (ПЕРВАЯ СТРАНИЦА) --- */
+    .main-title {
+        font-size: 45px;           /* ← "THE WEDDING DAY" */
+        letter-spacing: 5px;       /* ← разрядка букв */
+    }
+
+    .couple-names {
+        font-size: 4rem;           /* ← "Илья & Наталья" */
+    }
+
+    .reveal {
+        transform: translateY(20px); /* ← анимация появления (меньше сдвиг) */
+    }
+
+    .hero-image-container {
+        max-width: 350px;          /* ← ширина главного фото */
+    }
+
+    .wedding-details {
+        font-size: 2rem;           /* ← дата и время */
+        gap: 8px;                  /* ← расстояние между датой, палочкой, временем */
+    }
+
+    .small-line {
+        width: 150px;              /* ← длина декоративной черты */
+    }
+
+    /* --- МЫ СТАНЕМ СЕМЬЁЙ --- */
+    .ct-section-couple {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .ct-couple-image {
+        width: 100%;
+        height: 550px;             /* ← высота фото */
+    }
+    .ct-couple-text {
+        padding: 40px 20px;
+        text-align: center;
+    }
+    .script-text {
+        font-size: 5rem;           /* ← "Мы" */
+        margin-left: 0;
+        margin-bottom: -15px;
+    }
+    .ct-official-title .main-title {
+        font-size: 2rem;           /* ← "Официально станем семьей" */
+        margin-left: 0;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+    .ct-joke-description {
+        font-size: 1.2rem;         /* ← текст описания */
+        margin: 20px auto;
+        text-align: center;
+        max-width: 100%;
+        line-height: 1.6;
+    }
+
+    /* --- КАЛЕНДАРЬ --- */
+    .wedding-calendar {
+        flex-direction: column;
+        gap: 25px;
+        min-height: auto;
+        padding: 50px 15px;
+    }
+    .calendar-sidebar {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .side-line-top,
+    .side-line-bottom {
+        width: 50px;               /* ← длина боковых линий */
+        height: 1px;
+    }
+    .side-numbers {
+        flex-direction: row;
+        font-size: 2.5rem;         /* ← цифры 26 06 26 */
+        gap: 10px;
+        margin: 0;
+    }
+    .calendar-main {
+        width: 100%;
+        max-width: 400px;          /* ← ширина календаря */
+        margin: 0 auto;
+    }
+    .calendar-header {
+        margin-bottom: 30px;
+    }
+    .header-text {
+        font-size: 2.2rem;         /* ← "МЫ ЖДЁМ" */
+        letter-spacing: 8px;
+        margin-left: 0;
+    }
+    .header-script {
+        font-size: 4rem;           /* ← "Вас" */
+        position: static;
+        transform: none;
+        margin-left: 0;
+        top: 0;
+    }
+    .calendar-frame {
+        width: 100%;
+        padding: 25px 15px;        /* ← воздух внутри рамки */
+    }
+    .days-grid {
+        font-size: 1rem;           /* ← числа в календаре */
+        gap: 12px 6px;
+    }
+    .month-name {
+        font-size: 2.5rem;         /* ← "Июнь" */
+    }
+    .calendar-right-line {
+        width: 50px;               /* ← правая декоративная линия */
+        height: 1px;
+    }
+    .heart-day::after {
+        width: 40px;               /* ← размер сердца */
+        height: 45px;
+    }
+
+    /* --- ЛОКАЦИЯ --- */
+    .location-section {
+        padding-bottom: 100px;     /* ← отступ снизу */
+    }
+
+    .loc-header,
+    .loc-subheader {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .loc-title {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .loc-subtitle {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .loc-photos {
+        flex-direction: column !important;  /* ← фото друг под другом */
+        align-items: center;
+    }
+
+    .loc-photo-small {
+        width: 200px;              /* ← ширина маленьких фото */
+        height: 150px;             /* ← высота маленьких фото */
+    }
+
+    .loc-photo-left {
+        left: 0 !important;
+        top: 30px;            /* ← твой сдвиг вверх/вниз */
+    }
+    .loc-photo-right {
+        left: 0 !important;
+        top: -30px;             /* ← твой сдвиг вверх/вниз */
+    }
+
+    .loc-photo-big {
+        width: 300px;              /* ← ширина большого фото */
+        height: 380px;             /* ← высота большого фото */
+        border-width: 20px 12px 50px 12px;  /* ← белая рамка */
+        margin: 0 auto;
+    }
+
+    .loc-photo-caption {
+        font-size: 1.5rem;         /* ← "Тульский кремль" */
+        margin-top: 5px;
+    }
+
+    /* --- ТАЙМЕР --- */
+    .timer-section {
+        min-height: auto;
+        padding-bottom: 100px;     /* ← отступ снизу */
+    }
+
+    .timer-title {
+        font-size: 2rem;           /* ← "До нашей свадьбы осталось" */
+        letter-spacing: 1px;
+    }
+
+    .timer-bg {
+        position: relative;
+        padding: 30px 20px;        /* ← воздух вокруг цифр */
+    }
+
+    .timer-bg::before {
+        content: '';
+        position: absolute;
+        top: -5px;                 /* ← ДВИГАЙ ФОН ВВЕРХ/ВНИЗ */
+        left: -30px;               /* ← ДВИГАЙ ФОН ВЛЕВО/ВПРАВО */
+        width: 110%;               /* ← ШИРИНА ФОНА */
+        height: 130%;              /* ← ВЫСОТА ФОНА */
+        background-image: url('images/fontimer.jpg');
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+    }
+
+    .timer-container {
+        position: relative;
+        z-index: 1;
+        gap: 8px;                  /* ← расстояние между цифрами */
+    }
+
+    .timer-number {
+        font-size: 5.5rem;         /* ← цифры */
+    }
+
+    .timer-label {
+        font-size: 2.5rem;         /* ← "Дней", "Часов"... */
+    }
+
+    /* --- КОНТАКТЫ --- */
+    .contacts-section {
+        margin-top: 0px;
+        padding-top: 10px;
+        padding-bottom: 20px;      /* ← отступ снизу */
+    }
+
+    .contacts-script {
+        font-size: 9.5rem;         /* ← "Наши" */
+        margin-left: 0;
+    }
+
+    .contacts-main {
+        font-size: 3rem;           /* ← "контакты" */
+        letter-spacing: 2px;
+    }
+
+    .contacts-subtitle {
+        font-size: 0.6rem;         /* ← подпись */
+        margin-bottom: 30px;
+    }
+
+    .contacts-cards {
+        flex-direction: column;
+        gap: 30px;                 /* ← расстояние между Натальей и Ильёй */
+    }
+
+    .contact-name {
+        font-size: 5.5rem;         /* ← имена */
+        margin-top: 0;
+    }
+
+    .contact-phone {
+        font-size: 1.5rem;         /* ← номера телефонов */
+    }
+
+    .contacts-photo {
+        width: 350px;              /* ← ширина фото */
+        height: 267px;             /* ← высота фото */
+        margin-top: 30px;
+    }
+
+    .contacts-heart {
+        z-index: 2;
+        width: 35px;               /* ← размер сердца */
+        height: 35px;
+    }
+
+    /* --- RSVP (ПОДТВЕРЖДЕНИЕ) --- */
+    .rsvp-section {
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 15px;
+    }
+
+    .rsvp-sidebar {
+        display: none;             /* ← скрываем боковые линии на телефоне */
+    }
+
+    .rsvp-date {
+        flex-direction: row;
+        font-size: 3.5rem;         /* ← цифры 26 06 26 */
+        gap: 9px;
+        margin: 0;
+    }
+
+    .rsvp-title {
+        font-size: 2.5rem;         /* ← "Будем рады видеть" */
+        letter-spacing: 2px;
+    }
+
+    .rsvp-subtitle {
+        font-size: 6rem;           /* ← "Вас" */
+    }
+
+    .rsvp-text {
+        font-size: 0.85rem;        /* ← подпись */
+        margin-bottom: 20px;
+    }
+
+    .rsvp-input {
+        max-width: 100%;
+        font-size: 2rem;           /* ← поле ввода */
+        padding: 12px 15px;
+    }
+
+    .rsvp-question {
+        font-size: 1.8rem;         /* ← вопрос */
+    }
+
+    .rsvp-option {
+        font-size: 1.5rem;         /* ← варианты ответа */
+    }
+
+    .rsvp-btn {
+        font-size: 1.5rem;         /* ← кнопка "Отправить" */
+        padding: 12px 35px;
+    }
+
+    .rsvp-footer-text {
+        font-size: 2rem;           /* ← "ДО СКОРОЙ ВСТРЕЧИ!" */
+        margin-top: 40px;
+    }
+
+}

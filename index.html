@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-top-text reveal">
+            <h2 class="main-title">THE WEDDING DAY</h2>
+            <div class="small-line"></div>
+            <h1 class="couple-names">Илья & Наталья</h1>
+        </div>
+        
+        <div class="hero-image-container reveal delay-1">
+            <img src="images/1.jpg" alt="Wedding Photo" class="main-photo">
+        </div>
+
+        <div class="hero-bottom-text reveal delay-2">
+            <p class="wedding-details">26.06.2026 <span class="pipe">|</span> 12:00</p>
+        </div>
+    </section>
+
+    <section class="ct-section-couple">
+        <div class="ct-couple-image reveal">
+            <img src="images/hands.jpg" alt="Наша фотография">
+        </div>
+
+        <div class="ct-couple-text reveal delay-1">
+            <h2 class="ct-official-title">
+                <span class="script-text">Мы</span>
+                <span class="main-title">Официально <br> станем семьей</span>
+            </h2>
+            
+            <p class="ct-joke-description">
+                Если вы сейчас читаете этот текст, значит совсем скоро вы увидите 
+                одного из нас в свадебном платье и думаем, что вы догадываетесь, 
+                кого именно...
+            </p>
+        </div>
+    </section>
+
+    <section class="wedding-calendar">
+        <div class="calendar-sidebar reveal">
+            <div class="side-line-top"></div>
+            <div class="side-numbers">
+                <span>26</span>
+                <span>06</span>
+                <span>26</span>
+            </div>
+            <div class="side-line-bottom"></div>
+        </div>
+
+        <div class="calendar-main reveal delay-1">
+            <div class="calendar-header">
+                <span class="header-text">МЫ ЖДЁМ</span>
+                <span class="header-script">Вас</span>
+            </div>
+            <div class="calendar-frame">
+                <h3 class="month-name">Июнь</h3>
+                <div class="days-grid">
+                    <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span>
+                    <span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+                    <span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+                    <span>22</span><span>23</span><span>24</span><span>25</span>
+                    <span class="heart-day">26</span>
+                    <span>27</span><span>28</span>
+                    <span>29</span><span>30</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar-right-line reveal delay-2"></div>
+    </section>
+
+    <section class="location-section">
+        <div class="loc-header reveal">
+            <h2 class="loc-title">Локация</h2>
+        </div>
+        
+        <div class="loc-subheader reveal delay-1">
+            <p class="loc-subtitle">Наша свадьба пройдёт в</p>
+        </div>
+
+        <div class="loc-photos">
+            <div class="loc-photo-small loc-photo-left reveal">
+                <img src="images/kreml1.jpg">
+            </div>
+
+            <div class="loc-photo-big reveal delay-1">
+                <img src="images/kreml2.jpg">
+                <p class="loc-photo-caption">Тульский кремль</p>
+            </div>
+
+            <div class="loc-photo-small loc-photo-right reveal delay-2">
+                <img src="images/kreml4.jpg">
+            </div>
+        </div>
+    </section>
+
+    <section class="timer-section">
+        <div class="timer-header reveal">
+            <h2 class="timer-title">До нашей свадьбы осталось</h2>
+        </div>
+
+        <div class="timer-bg reveal delay-1">
+            <div class="timer-container">
+                <div class="timer-block">
+                    <span class="timer-number" id="days">00</span>
+                    <span class="timer-label">Дней</span>
+                </div>
+                <div class="timer-block">
+                    <span class="timer-number" id="hours">00</span>
+                    <span class="timer-label">Часов</span>
+                </div>
+                <div class="timer-block">
+                    <span class="timer-number" id="minutes">00</span>
+                    <span class="timer-label">Минут</span>
+                </div>
+                <div class="timer-block">
+                    <span class="timer-number" id="seconds">00</span>
+                    <span class="timer-label">Секунд</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacts-section">
+        <div class="contacts-header reveal">
+            <h2 class="contacts-script">Наши</h2>
+            <h2 class="contacts-main">контакты</h2>
+        </div>
+
+        <p class="contacts-subtitle reveal delay-1">По всем вопросам вы можете связаться с нами</p>
+
+        <div class="contacts-cards">
+            <div class="contact-card contact-left reveal">
+                <p class="contact-name">Наталья</p>
+                <p class="contact-phone">+7 (960) 602-93-60</p>
+            </div>
+
+            <div class="contact-card contact-right reveal delay-1">
+                <p class="contact-name">Илья</p>
+                <p class="contact-phone">+7 (910) 588-35-04</p>
+            </div>
+        </div>
+
+        <div class="contacts-photo reveal delay-2">
+            <img src="images/2.jpg" alt="Мы">
+            <div class="contacts-heart"></div>
+        </div>
+    </section>
+
+    <section class="rsvp-section">
+        <div class="rsvp-sidebar reveal">
+            <div class="rsvp-line-top"></div>
+            <div class="rsvp-date">
+                <span>26</span>
+                <span>06</span>
+                <span>26</span>
+            </div>
+            <div class="rsvp-line-bottom"></div>
+        </div>
+
+        <div class="rsvp-right reveal delay-1">
+            <div class="rsvp-main">
+                <h2 class="rsvp-title">Будем рады видеть</h2>
+                <h2 class="rsvp-subtitle">Вас</h2>
+
+                <p class="rsvp-text">Пожалуйста, подтвердите присутствие на нашей свадьбе до:</p>
+
+                <form class="rsvp-form">
+                    <input type="text" class="rsvp-input" placeholder="Имя и Фамилия">
+                    <p class="rsvp-question">Планируете ли вы присутствовать на нашей свадьбе?</p>
+                    <div class="rsvp-options">
+                        <label class="rsvp-option">
+                            <input type="radio" name="attendance" value="yes">
+                            <span>С удовольствием приду!</span>
+                        </label>
+                        <label class="rsvp-option">
+                            <input type="radio" name="attendance" value="no">
+                            <span>К сожалению, не смогу</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="rsvp-btn">Отправить</button>
+                </form>
+            </div>
+
+            <div class="rsvp-footer">
+                <p class="rsvp-footer-text">ДО СКОРОЙ <br> ВСТРЕЧИ!</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="timer.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const hiddenElements = document.querySelectorAll('.reveal');
+            hiddenElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>

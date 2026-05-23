@@ -171,29 +171,29 @@
             <div class="rsvp-line-bottom"></div>
         </div>
 
-        <div class="rsvp-right reveal delay-1">
-            <div class="rsvp-main">
-                <h2 class="rsvp-title">Будем рады видеть</h2>
-                <h2 class="rsvp-subtitle">Вас</h2>
+    <div class="rsvp-right reveal delay-1">
+                <div class="rsvp-main">
+                    <h2 class="rsvp-title">Будем рады видеть</h2>
+                    <h2 class="rsvp-subtitle">Вас</h2>
 
-                <p class="rsvp-text">Пожалуйста, подтвердите присутствие на нашей свадьбе до:</p>
+                    <p class="rsvp-text">Пожалуйста, подтвердите присутствие на нашей свадьбе до:</p>
 
-                <form class="rsvp-form">
-                    <input type="text" class="rsvp-input" placeholder="Имя и Фамилия">
-                    <p class="rsvp-question">Планируете ли вы присутствовать на нашей свадьбе?</p>
-                    <div class="rsvp-options">
-                        <label class="rsvp-option">
-                            <input type="radio" name="attendance" value="yes">
-                            <span>С удовольствием приду!</span>
-                        </label>
-                        <label class="rsvp-option">
-                            <input type="radio" name="attendance" value="no">
-                            <span>К сожалению, не смогу</span>
-                        </label>
-                    </div>
-                    <button type="submit" class="rsvp-btn">Отправить</button>
-                </form>
-            </div>
+                    <form class="rsvp-form" id="rsvpForm">
+                        <input type="text" class="rsvp-input" id="guestName" placeholder="Имя и Фамилия">
+                        <p class="rsvp-question">Планируете ли вы присутствовать на нашей свадьбе?</p>
+                        <div class="rsvp-options">
+                            <label class="rsvp-option">
+                                <input type="radio" name="attendance" value="yes" checked>
+                                <span>С удовольствием приду!</span>
+                            </label>
+                            <label class="rsvp-option">
+                                <input type="radio" name="attendance" value="no">
+                                <span>К сожалению, не смогу</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="rsvp-btn">Отправить</button>
+                    </form>
+                </div>
 
             <div class="rsvp-footer">
                 <p class="rsvp-footer-text">ДО СКОРОЙ <br> ВСТРЕЧИ!</p>
@@ -202,6 +202,7 @@
     </section>
 
     <script src="timer.js"></script>
+    <script src="send.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const observerOptions = {

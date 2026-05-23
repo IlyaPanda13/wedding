@@ -160,29 +160,8 @@
         </div>
     </section>
 
-    <section class="rsvp-section">
-        <div class="rsvp-sidebar reveal">
-            <div class="rsvp-line-top"></div>
-            <div class="rsvp-date">
-                <span>26</span>
-                <span>06</span>
-                <span>26</span>
-            </div>
-            <div class="rsvp-line-bottom"></div>
-        </div>
-
-    <section class="rsvp-section">
-        <div class="rsvp-sidebar reveal">
-            <div class="rsvp-line-top"></div>
-            <div class="rsvp-date">
-                <span>26</span>
-                <span>06</span>
-                <span>26</span>
-            </div>
-            <div class="rsvp-line-bottom"></div>
-        </div>
-
-    <section class="rsvp-section">
+ 
+<section class="rsvp-section">
         <div class="rsvp-sidebar reveal">
             <div class="rsvp-line-top"></div>
             <div class="rsvp-date">
@@ -200,8 +179,9 @@
 
                     <p class="rsvp-text">Пожалуйста, подтвердите присутствие на нашей свадьбе:</p>
 
-                    <form class="rsvp-form" id="rsvpForm">
-                        <input type="text" class="rsvp-input" id="guestName" placeholder="Имя и Фамилия">
+                    <form class="rsvp-form" id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" target="hidden_iframe">
+                        <input type="hidden" name="access_key" value="b5517f35-1d57-4ca3-9109-9cb7f7323f65">
+                        <input type="text" class="rsvp-input" id="guestName" name="guestName" placeholder="Имя и Фамилия">
                         <p class="rsvp-question">Планируете ли вы присутствовать на нашей свадьбе?</p>
                         <div class="rsvp-options">
                             <label class="rsvp-option">
@@ -215,6 +195,8 @@
                         </div>
                         <button type="submit" class="rsvp-btn">Отправить</button>
                     </form>
+
+                    <iframe name="hidden_iframe" style="display:none;"></iframe>
                 </div>
 
             <div class="rsvp-footer">
@@ -225,35 +207,14 @@
 
     <script src="timer.js"></script>
     <script>
-        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const form = document.getElementById('rsvpForm');
-            const name = document.getElementById('guestName').value;
-            const attendance = document.querySelector('input[name="attendance"]:checked').value;
-
-            const formData = new FormData();
-            formData.append('access_key', 'b5517f35-1d57-4ca3-9109-9cb7f7323f65');
-            formData.append('guestName', name);
-            formData.append('attendance', attendance);
-            formData.append('subject', 'Новое подтверждение со свадебного сайта!');
-
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    form.style.display = 'none';
-                    alert('Спасибо! Ваш ответ отправлен 🤍');
-                } else {
-                    alert('Ошибка. Попробуйте позже.');
-                }
-            })
-            .catch(() => {
-                alert('Ошибка. Попробуйте позже.');
-            });
+        var formSubmitted = false;
+        document.getElementById('rsvpForm').addEventListener('submit', function() {
+            if (formSubmitted) return;
+            formSubmitted = true;
+            setTimeout(function() {
+                document.getElementById('rsvpForm').style.display = 'none';
+                alert('Спасибо! Ваш ответ отправлен 🤍');
+            }, 1500);
         });
     </script>
     <script>

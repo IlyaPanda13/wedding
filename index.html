@@ -179,9 +179,8 @@
 
                     <p class="rsvp-text">Пожалуйста, подтвердите присутствие на нашей свадьбе:</p>
 
-                    <form class="rsvp-form" id="rsvpForm" action="https://api.web3forms.com/submit" method="POST" target="hidden_iframe">
-                        <input type="hidden" name="access_key" value="b5517f35-1d57-4ca3-9109-9cb7f7323f65">
-                        <input type="text" class="rsvp-input" id="guestName" name="guestName" placeholder="Имя и Фамилия">
+                    <form class="rsvp-form" id="rsvpForm">
+                        <input type="text" class="rsvp-input" id="guestName" placeholder="Имя и Фамилия">
                         <p class="rsvp-question">Планируете ли вы присутствовать на нашей свадьбе?</p>
                         <div class="rsvp-options">
                             <label class="rsvp-option">
@@ -195,8 +194,6 @@
                         </div>
                         <button type="submit" class="rsvp-btn">Отправить</button>
                     </form>
-
-                    <iframe name="hidden_iframe" style="display:none;"></iframe>
                 </div>
 
             <div class="rsvp-footer">
@@ -207,18 +204,40 @@
 
     <script src="timer.js"></script>
     <script>
-        var formSubmitted = false;
-        document.getElementById('rsvpForm').addEventListener('submit', function() {
-            if (formSubmitted) return;
-            formSubmitted = true;
-            setTimeout(function() {
-                document.getElementById('rsvpForm').style.display = 'none';
-                alert('Спасибо! Ваш ответ отправлен 🤍');
-            }, 1500);
-        });
-    </script>
-    <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Отправка формы
+            document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                var form = document.getElementById('rsvpForm');
+                var name = document.getElementById('guestName').value;
+                var attendance = document.querySelector('input[name="attendance"]:checked').value;
+
+                var formData = new FormData();
+                formData.append('access_key', 'b5517f35-1d57-4ca3-9109-9cb7f7323f65');
+                formData.append('guestName', name);
+                formData.append('attendance', attendance);
+                formData.append('subject', 'Новое подтверждение со свадебного сайта!');
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(function(response) { return response.json(); })
+                .then(function(data) {
+                    if (data.success) {
+                        form.style.display = 'none';
+                        alert('Спасибо! Ваш ответ отправлен 🤍');
+                    } else {
+                        alert('Ошибка. Попробуйте позже.');
+                    }
+                })
+                .catch(function() {
+                    alert('Ошибка. Попробуйте позже.');
+                });
+            });
+
+            // Анимация появления
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',

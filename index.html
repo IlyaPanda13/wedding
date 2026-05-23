@@ -202,16 +202,19 @@
         </div>
     </section>
 
-    <script src="timer.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Отправка формы
             document.getElementById('rsvpForm').addEventListener('submit', function(e) {
                 e.preventDefault();
 
                 var form = document.getElementById('rsvpForm');
                 var name = document.getElementById('guestName').value;
                 var attendance = document.querySelector('input[name="attendance"]:checked').value;
+
+                if (!name) {
+                    alert('Пожалуйста, введите Имя и Фамилию');
+                    return;
+                }
 
                 var formData = new FormData();
                 formData.append('access_key', 'b5517f35-1d57-4ca3-9109-9cb7f7323f65');
@@ -229,21 +232,15 @@
                         form.style.display = 'none';
                         alert('Спасибо! Ваш ответ отправлен 🤍');
                     } else {
-                        alert('Ошибка. Попробуйте позже.');
+                        alert('Ошибка сервера: ' + data.message);
                     }
                 })
-                .catch(function() {
-                    alert('Ошибка. Попробуйте позже.');
+                .catch(function(err) {
+                    alert('Нет связи. Проверьте интернет.');
                 });
             });
 
-            // Анимация появления
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15
-            };
-
+            // Анимация
             const observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -251,10 +248,9 @@
                         observer.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
+            }, { threshold: 0.15 });
 
-            const hiddenElements = document.querySelectorAll('.reveal');
-            hiddenElements.forEach((el) => observer.observe(el));
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
         });
     </script>
 </body>

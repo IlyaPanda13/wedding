@@ -176,18 +176,19 @@
                     <h2 class="rsvp-title">Будем рады видеть</h2>
                     <h2 class="rsvp-subtitle">Вас</h2>
 
-                    <p class="rsvp-text">Пожалуйста, подтвердите присутствие на нашей свадьбе до:</p>
+                    <p class="rsvp-text">Пожалуйста, подтвердите присутствие на нашей свадьбе:</p>
 
-                    <form class="rsvp-form" id="rsvpForm">
-                        <input type="text" class="rsvp-input" id="guestName" placeholder="Имя и Фамилия">
+                    <form class="rsvp-form" id="rsvpForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="b5517f35-1d57-4ca3-9109-9cb7f7323f65">
+                        <input type="text" class="rsvp-input" id="guestName" name="guestName" placeholder="Имя и Фамилия">
                         <p class="rsvp-question">Планируете ли вы присутствовать на нашей свадьбе?</p>
                         <div class="rsvp-options">
                             <label class="rsvp-option">
-                                <input type="radio" name="attendance" value="yes" checked>
+                                <input type="radio" name="attendance" value="Да, с удовольствием приду!" checked>
                                 <span>С удовольствием приду!</span>
                             </label>
                             <label class="rsvp-option">
-                                <input type="radio" name="attendance" value="no">
+                                <input type="radio" name="attendance" value="К сожалению, не смогу">
                                 <span>К сожалению, не смогу</span>
                             </label>
                         </div>
@@ -202,7 +203,14 @@
     </section>
 
     <script src="timer.js"></script>
-    <script src="send.js"></script>
+    <script>
+        document.getElementById('rsvpForm').addEventListener('submit', function() {
+            setTimeout(function() {
+                document.getElementById('rsvpForm').style.display = 'none';
+                alert('Спасибо! Ваш ответ отправлен 🤍');
+            }, 1000);
+        });
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const observerOptions = {
